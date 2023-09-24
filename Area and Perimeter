@@ -1,0 +1,33 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	// Step 1: Declare data types and variables
+	double width = 0;
+	double height = 0;
+	double area = 0;
+	double perimeter = 0;
+
+	// Step 2: Read in width
+	cout << "Enter a width: ";
+	cin >> width;
+
+	// Step 3: Read in heigth
+	cout << "Enter a height: ";
+	cin >> height;
+
+	// Step 4: Computing area and perimeter
+	area = width * height;
+
+	// Step 5: Computing perimeter
+	perimeter = 2 * (width + height);
+
+	// Step 6: Display values of area
+	cout << "The area is " << area << endl;
+
+	// Step 7: Display values of perimeter
+	cout << "The perimeter is " << perimeter << endl;
+
+	return 0;
+}
