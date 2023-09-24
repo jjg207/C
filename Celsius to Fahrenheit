@@ -1,0 +1,21 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	// Step 1: Declare data types and variables
+	double celsius;
+	double fahrenheit;
+
+	// Step 2: Read in celsius
+	cout << "Enter a degree in Celsius: ";
+	cin >> celsius;
+
+	// Step 3: Compute fahrenheit
+	fahrenheit = (9.0 / 5) * celsius + 32;
+
+	// Step 6: Display value of fahrenheit
+	cout << "Fahrenheit degree is " << fahrenheit << endl;
+
+	return 0;
+}
