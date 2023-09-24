@@ -1,0 +1,52 @@
+#include <iostream>
+using namespace std;
+
+// Write a function to display three numbers in increasing order
+void displaySortedNumbers(
+	double num1, double num2, double num3)
+{
+	// Write selection statements to account for all 6 possible increasing orders
+
+	// Increasing order (num3, num2, num1)
+	if (num1 >= num2 && num1 >= num3 && num2 >= num3)
+		cout << num3 << " " << num2 << " " << num1 << endl;
+
+	// Increasing order (num2, num3, num1)
+	else if (num1 >= num2 && num1 >= num3 && num3 >= num2)
+		cout << num2 << " " << num3 << " " << num1 << endl;
+
+	// Increasing order (num3, num1, num2)
+	else if (num2 >= num1 && num2 >= num3 && num1 >= num3)
+		cout << num3 << " " << num1 << " " << num2 << endl;
+
+	// Increasing order (num1, num3, num2)
+	else if (num2 >= num1 && num2 >= num3 && num3 >= num1)
+		cout << num1 << " " << num3 << " " << num2 << endl;
+
+	// Increasing order (num1, num2, num3)
+	else if (num3 >= num1 && num3 >= num2 && num2 >= num1)
+		cout << num1 << " " << num2 << " " << num3 << endl;
+
+	// Increasing order (num2, num1, num3)
+	else
+		cout << num2 << " " << num1 << " " << num3 << endl;
+}
+
+int main()
+{
+	// Declare type and mutliple variables
+	double i, j, k;
+
+	// Prompt user to enter three variables(number)
+	cout << "Enter three numbers: ";
+	cin >> i >> j >> k;
+
+	// Variables are sorted by the void function displaySortedNumbers() which then displays the results
+	cout << "The sorted numbers are ";
+	displaySortedNumbers(i, j, k);
+
+	return 0;
+}
+
+// Author: Javier Garcia
+// Date Created: September 20, 2023
