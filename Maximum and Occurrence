@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+
+int main()
+{
+	// Declare data types, variables, and values
+	int entry;
+	int count = 1;
+	int max;
+	
+	// Prompt user to enter initial value to begin while loop
+	cout << "Enter an integer: ";
+	cin >> entry;
+	max = entry;
+
+	// Write a while loop that evaluates all values except 0
+	while (entry != 0)
+	{
+		// Write selection statments to evaluate the largest number and its occurences
+		if (entry > max)
+		{
+			max = entry;
+			count = 1;
+		}
+		else if (entry == max)
+			count++;
+		
+		// Prompt user to enter further values
+		cout << "Enter an integer: ";
+		cin >> entry;
+	}
+
+	// Display the largest value entered into the while loop
+	cout << "The largest number is " << max << endl;
+
+	// Display the occurence count of the largest value during while loop
+	cout << "The occurrence count of the largest number is " << count << endl; 
+
+	return 0;
+}
+
+// Author: Javier Garcia
+// Date Created: September 20, 2023
