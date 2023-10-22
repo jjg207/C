@@ -1,0 +1,43 @@
+#include <iostream>
+#include <fstream>
+#include <cstdlib>
+#include <ctime>
+using namespace std;
+
+int main()
+{
+	// Create seed of random numbers
+	srand(time(0));
+
+	// Write in 100 integers created randomly between 1 and 100
+	ofstream output;
+
+	// Create or open a file called "data.txt"
+	output.open("data.txt");
+
+	// Create if loop to see if data.txt exists
+	if (output.fail())
+	{
+		// If data.txt does exist create file
+		for (int i = 0; i < 100; i++)
+		{
+			output << (rand() % 100) + 1 << " ";
+		}
+	}
+	else
+	{
+		// If data.txt does not exist append new data to it
+		for (int i = 0; i < 100; i++)
+		{
+			output << (rand() % 100) + 1 << " ";
+		}
+	}
+
+	// Close stream to save data.txt file properly
+	output.close();
+
+	return 0;
+}
+
+// Author: Javier Garcia
+// Date Created: October 8, 2023
